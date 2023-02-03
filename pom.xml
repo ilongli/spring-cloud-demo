@@ -6,6 +6,9 @@
     <modules>
         <module>auth-service</module>
         <module>book-service</module>
+        <module>spring-authorization-server</module>
+        <module>resource-server</module>
+        <module>api-client</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -67,7 +70,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>2021.0.5</version>
+                <version>2021.0.2</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

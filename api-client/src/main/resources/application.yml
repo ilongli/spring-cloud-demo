@@ -1,0 +1,25 @@
+server:
+  port: 7005
+  servlet:
+    session:
+      cookie:
+        name: CLIENT-SESSION
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          user-client:
+            provider: spring
+            client-id: web
+            client-secret: 654321
+            authorization-grant-type: authorization_code
+            redirect-uri: "http://192.168.2.86:7005/login/oauth2/code/{registrationId}"
+            scope: user
+            client-name: user-client
+        provider:
+          spring:
+#            issuer-uri: http://192.168.2.86:7003
+            authorization-uri: http://192.168.2.86:7003/oauth2/authorize
+            token-uri: http://192.168.2.86:7003/oauth2/token

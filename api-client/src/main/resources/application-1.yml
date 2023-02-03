@@ -1,0 +1,26 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          user-client:
+            provider: spring
+            client-id: web
+            client-secret: 654321
+            authorization-grant-type: authorization_code
+            redirect-uri: "http://192.168.2.86:7005/authorized"
+            scope: user
+            client-name: user-client
+          user-client-oidc:
+            provider: spring
+            client-id: web
+            client-secret: 654321
+            authorization-grant-type: authorization_code
+            redirect-uri: "http://192.168.2.86:7005/login/oauth2/code/{registrationId}"
+            scope: openid
+            client-name: user-client-oidc
+        provider:
+          spring:
+#            authorization-uri: http://192.168.2.86:7003/oauth2/authorize
+#            token-uri: http://192.168.2.86:7003/oauth2/token
+            issuer-uri: http://192.168.2.86:7003
