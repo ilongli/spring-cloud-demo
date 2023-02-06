@@ -9,6 +9,7 @@
         <module>spring-authorization-server</module>
         <module>resource-server</module>
         <module>api-client</module>
+        <module>spring-cloud-stream</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
